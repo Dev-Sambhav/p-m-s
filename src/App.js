@@ -9,12 +9,14 @@ import {
   Signup,
   ChatRoom,
   Landing,
+  Profile
 } from "./pages";
 
 function App() {
-  const { user } = useAuthContext();
+  const { user, isAuthReady } = useAuthContext();
   return (
     <div className="App">
+      {isAuthReady && (
       <BrowserRouter>
         <Routes>
           <Route
@@ -25,12 +27,14 @@ function App() {
             <Route path="create" element={<Create />} />
             <Route path="chatroom" element={<ChatRoom />} />
             <Route path="feedback" element={<Feedbackform />} />
+            <Route path="profile" element={<Profile />} />
           </Route>
           <Route path="/landing" element={<Landing />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Signup />} />
         </Routes>
       </BrowserRouter>
+      )}
     </div>
   );
 }

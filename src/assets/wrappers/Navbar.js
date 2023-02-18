@@ -39,6 +39,12 @@ const Wrapper = styled.nav`
     box-shadow: var(--shadow-2);
   }
 
+  .nav-img{
+    width: 25px;
+    /* height: 20px; */
+    border-radius: 50%;
+  }
+
   .dropdown {
     position: absolute;
     top: 40px;

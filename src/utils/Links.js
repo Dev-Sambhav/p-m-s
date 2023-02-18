@@ -2,6 +2,7 @@ import {MdSpaceDashboard} from "react-icons/md"
 import {IoIosCreate} from "react-icons/io"
 import {BsFillChatLeftQuoteFill} from "react-icons/bs"
 import {VscFeedback} from "react-icons/vsc"
+import {CgProfile} from "react-icons/cg"
 
 const links = [
     {
@@ -27,6 +28,12 @@ const links = [
         text:'Feedback',
         path:'/feedback',
         icon:<VscFeedback/>
+    },
+    {
+        id:5,
+        text:'Profile',
+        path:'/profile',
+        icon:<CgProfile/>
     },
 ]
 

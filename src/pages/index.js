@@ -10,6 +10,7 @@ import ProjectComments from "./project/ProjectComments";
 import ProjectSummary from "./project/ProjectSummary";
 import Signup from "./signup/Signup";
 import Landing from "./landing/Landing"
+import Profile from "./Profile";
 
 export {
   ChatRoom,
@@ -24,4 +25,5 @@ export {
   ProjectSummary,
   Signup,
   Landing,
+  Profile
 };

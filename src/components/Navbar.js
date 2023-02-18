@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { useLogout } from "../hooks/useLogout";
-import { FaAlignLeft, FaUserCircle, FaCaretDown } from "react-icons/fa";
+import { FaAlignLeft, FaCaretDown } from "react-icons/fa";
 import Logo from "./Logo";
 import { useAuthContext } from "../hooks/useAuthContext";
 import Wrapper from "../assets/wrappers/Navbar";
+
 const Navbar = () => {
   const {handleToggleSidebar,user} = useAuthContext();
   const [showLogout, setShowLogout] = useState(false);
@@ -29,7 +30,7 @@ const Navbar = () => {
 
         <div className="btn-container">
           <button className="btn" onClick={handleDropDown}>
-            <FaUserCircle />
+            <img className="nav-img" src={user.photoURL} alt="avatar" />
             {user.displayName}
             <FaCaretDown />
           </button>
