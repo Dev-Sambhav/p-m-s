@@ -14,7 +14,7 @@ export const useLogin = () => {
     try {
       // checking all field empty or not
       if (email === "" || password === "") {
-        throw "Required";
+        throw new Error("Required");
       }
       // login the user
       const res = await projectAuth.signInWithEmailAndPassword(email, password);
@@ -38,7 +38,7 @@ export const useLogin = () => {
       if (!isCancelled) {
         setIsLoading(false);
         console.log(err);
-        if (err == "Required") setError("Please fill all the fields");
+        if (err === "Required") setError("Please fill all the fields");
         else if (err.code === "auth/user-not-found")
           setError("User doesn't exists");
         else if (err.code === "auth/wrong-password")

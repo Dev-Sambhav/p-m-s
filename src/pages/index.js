@@ -9,6 +9,7 @@ import Project from "./project/Project";
 import ProjectComments from "./project/ProjectComments";
 import ProjectSummary from "./project/ProjectSummary";
 import Signup from "./signup/Signup";
+import Landing from "./landing/Landing"
 
 export {
   ChatRoom,
@@ -22,4 +23,5 @@ export {
   ProjectComments,
   ProjectSummary,
   Signup,
+  Landing,
 };

@@ -3,7 +3,7 @@ import NavLinks from "./NavLinks"
 import Logo from "../components/Logo"
 import Wrapper from '../assets/wrappers/BigSidebar';
 const BigSidebar = () => {
-  const {toggleSidebar, handleToggleSidebar} = useAuthContext();
+  const {toggleSidebar} = useAuthContext();
   return (
     <Wrapper>
         <div
