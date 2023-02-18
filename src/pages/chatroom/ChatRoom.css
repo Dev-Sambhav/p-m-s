@@ -1,0 +1,123 @@
+.chat-room {
+  width: 98%;
+  height: 65vh;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin-top: -75px;
+  padding: 10px;
+  overflow-y: scroll;
+  background-color: #dfdbe5;
+  border-radius: 15px;
+  background-color: #dfdbe5;
+  background-image: url("../../assets/chat-background_3.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.chat-room::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.chat-room {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.chat-room .message-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.message-box .no-chat {
+  color: var(--text-color);
+  text-align: center;
+  font-size: 20px;
+}
+.message-box .message {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 15px;
+  position: relative;
+  max-width: 300px;
+}
+
+.message img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-top: 12px;
+}
+
+.message p {
+  margin: 10px;
+  font-size: 15px;
+}
+
+.message.sent {
+  color: #192841;
+  float: right;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.message.sent .my-msg {
+  display: block;
+  padding: 11px;
+  border-radius: 7px;
+  background-color: #78e08f;
+}
+
+.message.received {
+  color: #192841;
+  float: left;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.message.received .other-msg {
+  display: block;
+  padding: 10px;
+  border-radius: 7px;
+  background-color: #a29bfe;
+}
+
+.SendMessageBox {
+  min-width: 690px;
+  margin-right: 10px;
+}
+
+.sendMsg {
+  display: flex;
+  width: 100%;
+  border-top: 1px solid lightgray;
+  padding: 10px;
+  padding-bottom: 30px;
+  background: #3a3845;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.my-cmt{
+  display: block;
+  position: relative;
+  left: -10px;
+  bottom: -10px;
+  color: var(--text-color);
+  font-size: 0.9em;
+}
+.logo-name{
+  position: relative;
+}
+.logo-txt{
+  position: relative;
+  color:#dfdbe5;
+  left: -8px;
+  top: -12px;
+  margin-right: -8px !important;
+}

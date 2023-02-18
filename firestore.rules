@@ -1,0 +1,24 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Rules for users collection
+    match /users/{user_id}{
+      // Any auth user can read and write.
+      allow read, create: if request.auth != null;
+      // Only user who created a project can update it.
+      allow update: if request.auth.uid == user_id
+    }
+    // Rules for project collection
+    match /projects/{project_id}{
+      // Any auth user can read, write and update the project.
+      allow read, create, update: if request.auth != null;
+      // Only user who created a project can delete it.
+      allow delete: if request.auth.uid == resource.data.createdBy.id
+    }
+
+    // Rules for chat-room collection
+    match /messages/{message_id}{
+      allow read, write: if request.auth != null;
+    }
+  }
+}
