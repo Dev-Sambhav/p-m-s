@@ -183,6 +183,8 @@ ul {
   background: var(--red-light);
   color: var(--red-dark);
   padding: var(--small-pad);
+  border-radius: var(--borderRadius);
+  margin-bottom: .3rem;
 }
 .btn-danger:hover {
   background: var(--red-dark);

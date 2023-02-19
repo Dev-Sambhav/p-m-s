@@ -3,17 +3,14 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSignup } from "../../hooks/useSignup";
 import { useAuthContext } from "../../hooks/useAuthContext";
 import Wrapper from "../../assets/wrappers/RegisterPage";
-import signup_logo from "../../assets/images/signup.svg"
+import signup_logo from "../../assets/images/signup.svg";
 
-
-import { FormRow} from "../../components";
+import { FormRow } from "../../components";
 
 const initialState = {
   displayName: "",
   email: "",
   password: "",
-  thumbnail: null,
-  thumbnailError: null,
 };
 
 const Signup = () => {
@@ -79,43 +76,46 @@ const Signup = () => {
           type="text"
           name="displayName"
           handleChange={handleChange}
-          value={values.displayName}
+          value={values.displayName == null ? '' : values.displayName}
           labelText="Display Name:"
         />
         <FormRow
           type="email"
           name="email"
           handleChange={handleChange}
-          value={values.email}
+          value={values.email == null ? '' : values.email}
           labelText="Email:"
         />
         <FormRow
           type="password"
           name="password"
           handleChange={handleChange}
-          value={values.password}
+          value={values.password == null ? '' : values.password}
           labelText="Password:"
         />
         <FormRow
           type="file"
           name="file"
           handleFileChange={handleFileChange}
-          value={thumbnail}
           labelText="Profile Thumbnail:"
         />
         {thumbnailError && <div className="error">{thumbnailError}</div>}
+        {isLoading && (
+          <button className="btn btn-block" disabled={true}>
+            Signing...
+          </button>
+        )}
         {!isLoading && (
           <button className="btn btn-block" disabled={isLoading}>
             Sign Up
           </button>
         )}
         <p>
-        Already a member?
-        <Link to="/login" className="member-btn">
-          Login
-        </Link>
+          Already a member?
+          <Link to="/login" className="member-btn">
+            Login
+          </Link>
         </p>
-
       </form>
     </Wrapper>
   );

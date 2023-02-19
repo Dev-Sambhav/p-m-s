@@ -7,7 +7,10 @@ service cloud.firestore {
       allow read, create: if request.auth != null;
       // Only user who created a project can update it.
       allow update: if request.auth.uid == user_id
+      // Any auth user can read, write and update the profile.
+      allow read, create, update: if request.auth != null;
     }
+    
     // Rules for project collection
     match /projects/{project_id}{
       // Any auth user can read, write and update the project.

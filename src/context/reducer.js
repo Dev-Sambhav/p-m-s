@@ -7,6 +7,7 @@ import {
   TOGGLE_USER,
   SHOW_ALERT,
   CLEAR_ALERT,
+  UPDATE_PROFILE,
 } from "./action";
 
 // reducer function
@@ -30,6 +31,14 @@ const authReducer = (state, action) => {
       };
     case LOGOUT:
       return { ...state, user: null };
+    case UPDATE_PROFILE:
+      return {
+        ...state,
+        user: action.payload,
+        isAuthReady: true,
+        toggleSidebar: false,
+        toggleUser: false,
+      };
     case IS_AUTH_READY:
       return {
         ...state,

@@ -65,6 +65,7 @@ const Login = () => {
       <div className="line"></div>
       <form className="form">
         <h3>Login</h3>
+        {alert && error && <div className="btn-danger">{error}</div>}
         <FormRow
           type="text"
           name="email"
@@ -84,8 +85,6 @@ const Login = () => {
             Logging...
           </button>
         )}
-        {alert && <div className="btn-danger">{error}</div>}
-        {/* {inputError !== "" && <div className="btn-danger">{inputError}</div>} */}
         {!isLoading && (
           <button
             type="button"
