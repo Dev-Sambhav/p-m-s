@@ -10,23 +10,44 @@ const Wrapper = styled.section`
     margin: 0 auto;
     padding: 2.5rem 0;
   }
-  .list-user {
-    width: 15.625rem;
+  .user-list {
+    width: 13.2rem;
     height: 26.563rem;
     background: rgba(0, 0, 0, 0.7);
     background-color: var(--light-white);
     position: fixed;
-    bottom: 76px;
-    right: 45px;
+    bottom: 64px;
+    right: 55px;
     border-radius: 10px;
     border-bottom-right-radius: 25px;
     padding: 1.5rem;
     z-index: 2;
     opacity: 1;
     transition: var(--transition);
+    overflow: hidden;
   }
-  .no-list-user {
+  .no-user-list {
     display: none;
+  }
+  .title{
+    color: var(--black);
+    text-align: center;
+    margin-bottom:.7rem !important;
+  }
+  .user-logo{
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .user-content{
+    color: var(--black);
+    overflow-y: scroll;
+    height: 50vh;
+  }
+  .user-list-item{
+    width: 100%;
+    display: flex;
+    gap: 12px;
   }
   .user-box {
     width: 55px;
@@ -34,7 +55,7 @@ const Wrapper = styled.section`
     background-color: var(--primary-500);
     position: fixed;
     bottom: 30px;
-    right: 20px;
+    right: 30px;
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
@@ -70,14 +91,20 @@ const Wrapper = styled.section`
     .dashboard-page {
       width: 90%;
     }
-    .list-user {
-      bottom: 70px;
-      right: 55px;
-    }
-    .user-box {
+  }
+  @media (max-width: 600px) {
+    .user-box{
+      right: 20px;
       bottom: 30px;
-      right: 30px;
     }
+    .user-list{
+      right: 50px;
+    }
+    .user-logo{
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
   }
 `;
 export default Wrapper;

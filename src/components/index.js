@@ -6,5 +6,6 @@ import Logo from "./Logo"
 import FormRow from "./FormRow"
 import BigSidebar from "./BigSidebar"
 import SmallSidebar from "./SmallSidebar"
+import ListUser from "./ListUser"
 
-export {Avatar, Navbar, OnlineUsers, ProjectList, Logo, FormRow, BigSidebar, SmallSidebar};
+export {Avatar, Navbar, OnlineUsers, ProjectList, Logo, FormRow, BigSidebar, SmallSidebar, ListUser};
