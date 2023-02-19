@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const Wrapper = styled.section`
   .dashboard {
@@ -8,7 +8,60 @@ const Wrapper = styled.section`
   .dashboard-page {
     width: 90vw;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 2.5rem 0;
+  }
+  .list-user {
+    width: 15.625rem;
+    height: 26.563rem;
+    background: rgba(0, 0, 0, 0.7);
+    background-color: var(--light-white);
+    position: fixed;
+    bottom: 76px;
+    right: 45px;
+    border-radius: 10px;
+    border-bottom-right-radius: 25px;
+    padding: 1.5rem;
+    z-index: 2;
+    opacity: 1;
+    transition: var(--transition);
+  }
+  .no-list-user {
+    display: none;
+  }
+  .user-box {
+    width: 55px;
+    height: 55px;
+    background-color: var(--primary-500);
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    z-index: 3;
+  }
+  .user-box:hover {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-700);
+  }
+  .user-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+  }
+  .user-icon:hover {
+    width: 60px;
+    height: 60px;
+  }
+  .user-icon i {
+    font-size: 35px;
+    color: var(--light-white);
+    transition: all 0.2s ease-in-out;
   }
   @media (min-width: 992px) {
     .dashboard {
@@ -17,6 +70,14 @@ const Wrapper = styled.section`
     .dashboard-page {
       width: 90%;
     }
+    .list-user {
+      bottom: 70px;
+      right: 55px;
+    }
+    .user-box {
+      bottom: 30px;
+      right: 30px;
+    }
   }
-`
-export default Wrapper
+`;
+export default Wrapper;

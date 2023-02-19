@@ -8,7 +8,7 @@ const links = [
     {
         id:1,
         text:'Dashboard',
-        path:'/dashboard',
+        path:'/',
         icon:<MdSpaceDashboard/>
     },
     {

@@ -23,7 +23,7 @@ function App() {
             path="/"
             element={user ? <SharedLayout /> : <Navigate to="/landing" />}
           >
-            <Route path="dashboard" element={<Dashboard />} />
+            <Route index element={<Dashboard />} />
             <Route path="create" element={<Create />} />
             <Route path="chatroom" element={<ChatRoom />} />
             <Route path="feedback" element={<Feedbackform />} />

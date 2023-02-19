@@ -38,6 +38,7 @@ html {
   /* rest of the colors */
   --black: #222;
   --white: #fff;
+  --light-white:#FFFFFF;
   --red-light: #f8d7da;
   --red-dark: #842029;
   --green-light: #d1e7dd;
@@ -143,6 +144,11 @@ ul {
   width: 100%;
   display: block;
   object-fit: cover;
+}
+
+/* background */
+.light-dark{
+  background: rgba(0, 0, 0, 0.7);
 }
 
 /* buttons */

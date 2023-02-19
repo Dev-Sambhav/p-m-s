@@ -53,7 +53,7 @@ const Login = () => {
   // redirect to user once login successful
   useEffect(() => {
     if (user) {
-      navigate("/dashboard");
+      navigate("/");
     }
   }, [user, navigate]);
 
