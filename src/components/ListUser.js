@@ -1,9 +1,9 @@
-import { Outlet } from "react-router-dom";
 import { useCollection } from "../hooks/useCollection";
+import Wrapper from "../assets/wrappers/ListUser"
 const ListUser = ({ isUserIcon, handleClick }) => {
-  const { documents: users, error, isLoading } = useCollection("users");
+  const { documents: users } = useCollection("users");
   return (
-    <div className="dashboard-page">
+    <Wrapper>
       <div className={!isUserIcon ? "user-list" : "no-user-list"}>
         <h2 className="title">All Users</h2>
         <div className="user-content">
@@ -12,7 +12,11 @@ const ListUser = ({ isUserIcon, handleClick }) => {
               <div key={user.id} className="user-list-item">
                 {user.online && <span className="online-user"></span>}
                 <span>{user.displayName}</span>
-                <img src={user.photoURL} className="user-logo" alt="user-logo" />
+                <img
+                  src={user.photoURL}
+                  className="user-logo"
+                  alt="user-logo"
+                />
               </div>
             ))}
         </div>
@@ -26,8 +30,7 @@ const ListUser = ({ isUserIcon, handleClick }) => {
           )}
         </button>
       </div>
-      <Outlet />
-    </div>
+    </Wrapper>
   );
 };
 export default ListUser;

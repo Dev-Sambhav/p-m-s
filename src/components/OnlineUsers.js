@@ -1,9 +1,6 @@
 import { useCollection } from "../hooks/useCollection";
 import { useAuthContext } from "../hooks/useAuthContext";
 
-// styles
-import "./OnlineUsers.css";
-
 // component
 import { Avatar } from "./";
 import { FiToggleLeft } from "react-icons/fi";

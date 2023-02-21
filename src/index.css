@@ -149,6 +149,7 @@ ul {
 /* background */
 .light-dark{
   background: rgba(0, 0, 0, 0.7) !important;
+  min-height: 100vh;
 }
 
 /* buttons */
@@ -319,6 +320,11 @@ ul {
 }
 .coffee-info a {
   color: var(--primary-500);
+}
+
+/* for phone and tab */
+input, textarea, button, select, div, a {
+  -webkit-tap-highlight-color: transparent !important;
 }
 
 @media screen and (min-width: 992px) {

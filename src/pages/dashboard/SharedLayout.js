@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import { useState } from "react";
 import { Navbar, BigSidebar, SmallSidebar } from "../../components";
 import Wrapper from "../../assets/wrappers/SharedLayout";
@@ -15,7 +16,10 @@ const SharedLayout = () => {
         <BigSidebar />
         <div className={!isUserIcon ? "light-dark" : ""}>
           <Navbar />
+          <div className="dashboard-page">
           <ListUser isUserIcon={isUserIcon} handleClick={handleClick} />
+          <Outlet/>
+          </div>
         </div>
       </main>
     </Wrapper>
