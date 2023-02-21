@@ -13,7 +13,7 @@ const ProjectFilter = ({changeFilter, currentFilter}) => {
   };
   return (
     <div className="project-filter">
-      <nav>
+      <nav className="gradient-effect">
         <p>Filter By :</p>
         {filterList.map((filter) => (
           <button

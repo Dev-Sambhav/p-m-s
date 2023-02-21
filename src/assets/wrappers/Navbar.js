@@ -6,6 +6,8 @@ const Wrapper = styled.nav`
   align-items: center;
   justify-content: center;
   box-shadow: 0 1px 0px 0px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
   .logo {
     display: flex;
     align-items: center;
@@ -39,7 +41,7 @@ const Wrapper = styled.nav`
     box-shadow: var(--shadow-2);
   }
 
-  .nav-img{
+  .nav-img {
     width: 25px;
     border-radius: 50%;
   }
@@ -72,9 +74,6 @@ const Wrapper = styled.nav`
     margin: 0;
   }
   @media (min-width: 992px) {
-    position: sticky;
-    top: 0;
-
     .nav-center {
       width: 90%;
     }

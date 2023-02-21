@@ -9,7 +9,7 @@ const ProjectList = ({ projects }) => {
     <div className="project-list">
       {projects.length === 0 && <p>No Projects Yet!</p>}
       {projects.map((project) => (
-        <Link to={`/projects/${project.id}`} key={project.id}>
+        <Link className="gradient-effect" to={`/projects/${project.id}`} key={project.id}>
           <h4>{project.name}</h4>
           <p>Due by {project.dueDate.toDate().toDateString()}</p>
           <div className="assigned-to">

@@ -4,11 +4,10 @@ const Wrapper = styled.section`
   .dashboard-area {
     margin-top: -1rem;
     margin-bottom: 20px;
+    width: 100%;
   }
-
   .project-filter {
-    margin: 30px auto;
-    /* width: 100%; */
+    margin: 5px auto;
   }
   .project-filter nav {
     width: 100%;
@@ -17,7 +16,6 @@ const Wrapper = styled.section`
     align-items: center;
     flex-wrap: wrap;
     padding: 10px;
-    background-color: var(--primary-500);
     color: var(--white);
     border-radius: 4px;
   }
@@ -32,15 +30,18 @@ const Wrapper = styled.section`
     color: var(--light-white);
     cursor: pointer;
     font-size: 0.9em;
+    margin-left: 10px
   }
 
   .project-filter button.active {
     color: #f0f4f8;
     font-weight: bold;
+    font-size: 1em;
   }
   @media (max-width: 600px) {
-    .project-filter nav{
-        row-gap: 12px;
+    .project-filter nav {
+      justify-content: normal;
+      row-gap: 10px;
     }
   }
 `;

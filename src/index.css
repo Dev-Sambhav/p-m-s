@@ -38,7 +38,7 @@ html {
   /* rest of the colors */
   --black: #222;
   --white: #fff;
-  --light-white:#FFFFFF;
+  --light-white: #ffffff;
   --red-light: #f8d7da;
   --red-dark: #842029;
   --green-light: #d1e7dd;
@@ -146,8 +146,18 @@ ul {
   object-fit: cover;
 }
 
+/* page gradient */
+.gradient-effect {
+  background: rgb(156, 39, 176);
+  background: linear-gradient(
+    90deg,
+    rgba(156, 39, 176, 1) 0%,
+    rgba(188, 57, 211, 1) 50%
+  );
+}
+
 /* background */
-.light-dark{
+.light-dark {
   background: rgba(0, 0, 0, 0.7) !important;
   min-height: 100vh;
 }
@@ -191,7 +201,7 @@ ul {
   color: var(--red-dark);
   padding: var(--small-pad);
   border-radius: var(--borderRadius);
-  margin-bottom: .3rem;
+  margin-bottom: 0.3rem;
 }
 .btn-danger:hover {
   background: var(--red-dark);
@@ -323,7 +333,12 @@ ul {
 }
 
 /* for phone and tab */
-input, textarea, button, select, div, a {
+input,
+textarea,
+button,
+select,
+div,
+a {
   -webkit-tap-highlight-color: transparent !important;
 }
 
