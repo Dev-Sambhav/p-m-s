@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useCollection } from "../../hooks/useCollection";
 import { useAuthContext } from "../../hooks/useAuthContext";
+import Wrapper from "../../assets/wrappers/Dashboard"
 
 // styles
 // import "./Dashboard.css";
@@ -43,9 +44,9 @@ const Dashboard = () => {
     });
 
   return (
-    <>
-      <h2 className="page-title">Dashboard</h2>
-      <div className="dashboard">
+    <Wrapper>
+      {/* <h2 className="page-title">Dashboard</h2> */}
+      <div className="dashboard-area">
         {error && <p className="error">No Projects Yet!</p>}
         {documents && (
           <ProjectFilter
@@ -55,7 +56,7 @@ const Dashboard = () => {
         )}
         {projects && <ProjectList projects={projects} />}
       </div>
-    </>
+    </Wrapper>
   );
 };
 export default Dashboard;
