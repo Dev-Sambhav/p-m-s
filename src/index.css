@@ -147,14 +147,14 @@ ul {
 }
 
 /* page gradient */
-.gradient-effect {
+/* .gradient-effect {
   background: rgb(156, 39, 176);
   background: linear-gradient(
     90deg,
     rgba(156, 39, 176, 1) 0%,
     rgba(188, 57, 211, 1) 50%
   );
-}
+} */
 
 /* background */
 .light-dark {

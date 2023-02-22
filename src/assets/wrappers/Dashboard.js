@@ -5,6 +5,8 @@ const Wrapper = styled.section`
     margin-top: -1rem;
     margin-bottom: 20px;
     width: 100%;
+    font-family: var(--bodyFont);
+    font-weight: 500;
   }
   .project-filter {
     margin: 5px auto;
@@ -16,8 +18,9 @@ const Wrapper = styled.section`
     align-items: center;
     flex-wrap: wrap;
     padding: 10px;
-    color: var(--white);
+    color: var(--black);
     border-radius: 4px;
+    background-color: var(--white);
   }
   .project-filter p {
     font-size: 0.9em;
@@ -27,14 +30,13 @@ const Wrapper = styled.section`
   .project-filter button {
     background: transparent;
     border: 0;
-    color: var(--light-white);
+    color: var(--black);
     cursor: pointer;
     font-size: 0.9em;
     margin-left: 10px
   }
 
   .project-filter button.active {
-    color: #f0f4f8;
     font-weight: bold;
     font-size: 1em;
   }
