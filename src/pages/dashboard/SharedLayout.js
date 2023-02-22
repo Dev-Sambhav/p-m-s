@@ -14,7 +14,7 @@ const SharedLayout = () => {
       <main className="dashboard">
         <SmallSidebar />
         <BigSidebar />
-        <div className={!isUserIcon ? "light-dark" : ""}>
+        <div>
           <Navbar />
           <div className="dashboard-page">
           <ListUser isUserIcon={isUserIcon} handleClick={handleClick} />

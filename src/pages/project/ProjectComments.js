@@ -63,6 +63,7 @@ const ProjectComments = ({ project }) => {
             required
             onChange={(e) => setNewComment(e.target.value)}
             value={newComment}
+            className="comment-box"
           ></textarea>
         </label>
         <button className="btn">Add Comment</button>

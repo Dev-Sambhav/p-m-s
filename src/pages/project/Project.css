@@ -1,9 +1,9 @@
 .project-details {
-  margin-top: -20px;
+  margin-top: -40px;
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 4fr 2fr;
   align-items: start;
-  grid-gap: 60px;
+  grid-gap: 50px;
 }
 
 .project-details .assigned-users p {
@@ -14,10 +14,10 @@
 /* project summary */
 .project-summary {
   background-color: #fff;
-  padding: 30px;
-  border-radius: 4px;
-  overflow-y: scroll;
+  padding: 40px;
+  border-radius: var(--largeBorderRadius);
   margin-top: 40px;
+  padding-bottom: 20px;
 }
 
 .project-title{
@@ -30,6 +30,7 @@
 }
 .project-summary .details {
   margin: 30px 0;
+  margin-top: 20px;
   color: var(--text-color);
   line-height: 1.8em;
   font-size: 0.9em;
@@ -48,43 +49,39 @@
 .project-summary .assigned-users p {
   text-align: center;
 }
-.project-summary + .btn {
-  margin-top: 20px;
+.project-summary .btn {
+  margin-bottom: 20px;
 }
 
 /* project comments */
 .project-chat{
   overflow-y: scroll;
-  max-height: 45vh;
+  max-height: 55vh;
+  margin-top: 40px;
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-.project-summary::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.project-summary{
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
+/* custom scrollbar */
 .project-chat::-webkit-scrollbar {
-  display: none;
+  width: 20px;
+}
+.project-chat::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.project-chat::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+.project-chat::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.project-chat{
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
 .project-comments label {
   margin-bottom: 0px;
 }
 .project-comments textarea {
   min-height: 40px;
-  font-size: 1.5em;
 }
 
 /* comment list */
@@ -92,17 +89,18 @@
   color: #E8EAF6;
 }
 .project-comments li {
-  padding: 16px;
-  border-radius: 4px;
+  padding: 5px 12px 12px;
+  border-radius: var(--borderRadius);
   border: 1px solid #f2f2f2;
   margin-top: 20px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
-  background: #fff;
+  background: var(--white);
 }
 .comment-author {
   display: flex;
   align-items: center;
-  color: var(--title-color);
+  gap: 7px;
+  color: var(--textColor);
 }
 .comment-author .avatar {
   width: 30px;
@@ -110,11 +108,27 @@
   margin-right: 10px;
 }
 .comment-date {
-  color: var(--text-color);
+  color: var(--textColor);
   font-size: 0.9em;
-  margin: 4px 0 10px;
+  margin-top: -20px;
+}
+.comment-date p{
+  margin-bottom: 0px !important;
+  color: var(--grey-500);
 }
 .comment-content {
-  color: var(--text-color);
+  color: var(--textColor);
   font-size: 0.9em;
+  margin-top: -10px;
+}
+.comment-content p{
+  margin-bottom: 0px !important;
+}
+.comment-box{
+  min-width: 284px;
+  min-height: 108px !important;
+  border: none;
+  outline: none;
+  padding: var(--small-pad);
+  margin: var(--small-margin);
 }

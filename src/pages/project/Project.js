@@ -2,7 +2,7 @@ import { useDocument } from "../../hooks/useDocument";
 import { useParams } from "react-router-dom";
 
 // styles
-// import "./Project.css";
+import "./Project.css";
 //components
 import ProjectComments from "./ProjectComments";
 import ProjectSummary from "./ProjectSummary";
@@ -14,7 +14,7 @@ const Project = () => {
     return <div className="error">{error}</div>;
   }
   if (!project) {
-    return <div className="loading">Loading...</div>;
+    return <div className="loading"></div>;
   }
   return (
     <div className="project-details">

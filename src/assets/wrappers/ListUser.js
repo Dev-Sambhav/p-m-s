@@ -4,7 +4,8 @@ const Wrapper = styled.div`
   .user-list {
     width: 13.2rem;
     height: 26.563rem;
-    background-color: var(--grey-50);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--white);
     position: fixed;
     bottom: 64px;
     right: 55px;
@@ -20,7 +21,7 @@ const Wrapper = styled.div`
     display: none;
   }
   .user-list .title {
-    color: var(--black);
+    /* color: var(--black); */
     text-align: center;
     padding-bottom: 10px;
     border-bottom: 2px solid #eee;
@@ -28,7 +29,7 @@ const Wrapper = styled.div`
     margin-bottom: 0.7rem;
   }
   .user-content {
-    color: var(--black);
+    /* color: var(--black); */
     overflow-y: scroll;
     height: 50vh;
     margin-top: -.5rem;
