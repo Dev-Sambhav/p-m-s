@@ -45,7 +45,7 @@ const Dashboard = () => {
     <Wrapper>
       {/* <h2 className="page-title">Dashboard</h2> */}
       <div className="dashboard-area">
-        {isLoading && <div className="loading"></div>}
+        {isLoading && <div className="loading loading-center"></div>}
         {!isLoading && (
           <div>
             {error && <p className="error">No Projects Yet!</p>}

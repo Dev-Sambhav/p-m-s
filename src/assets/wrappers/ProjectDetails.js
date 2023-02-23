@@ -99,6 +99,7 @@ const Wrapper = styled.div`
     border: 1px solid #f2f2f2;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
     background: var(--white);
+    margin-bottom: .3rem;
   }
   .comment-author {
     display: flex;

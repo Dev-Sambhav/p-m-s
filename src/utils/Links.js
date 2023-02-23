@@ -7,7 +7,7 @@ import {CgProfile} from "react-icons/cg"
 const links = [
     {
         id:1,
-        text:'Dashboard',
+        text:'Projects',
         path:'/',
         icon:<MdSpaceDashboard/>
     },
