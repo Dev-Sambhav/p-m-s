@@ -33,9 +33,9 @@ const ProjectComments = ({ project }) => {
   };
   return (
     <div className="project-comments">
-      {/* <h4>Project Comments</h4> */}
+      <h4>Project Comments</h4>
       <ul className="project-chat">
-        {project.comments.length > 0 &&
+        {project.comments.length > 0 ?
           project.comments.map((comment) => (
             <li key={comment.id}>
               <div className="comment-author">
@@ -53,7 +53,7 @@ const ProjectComments = ({ project }) => {
                 <p>{comment.content}</p>
               </div>
             </li>
-          ))}
+          )): <li>No Comments Yet</li>}
           <div ref={scroll}></div>
       </ul>
       <form className="add-comment" onSubmit={handleSubmit}>

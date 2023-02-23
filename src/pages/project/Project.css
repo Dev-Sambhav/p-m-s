@@ -16,7 +16,6 @@
   background-color: #fff;
   padding: 40px;
   border-radius: var(--largeBorderRadius);
-  margin-top: 40px;
   padding-bottom: 20px;
 }
 
@@ -57,7 +56,7 @@
 .project-chat{
   overflow-y: scroll;
   max-height: 55vh;
-  margin-top: 40px;
+  /* margin-top: 40px; */
 }
 
 /* custom scrollbar */
@@ -85,14 +84,15 @@
 }
 
 /* comment list */
-.project-comments h4 {
-  color: #E8EAF6;
+.project-comments h4, .summary-title {
+  color: var(--black);
+  margin-top: 40px;
+  margin-left: 5px;
 }
 .project-comments li {
   padding: 5px 12px 12px;
   border-radius: var(--borderRadius);
   border: 1px solid #f2f2f2;
-  margin-top: 20px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
   background: var(--white);
 }
@@ -131,4 +131,22 @@
   outline: none;
   padding: var(--small-pad);
   margin: var(--small-margin);
+}
+
+@media (max-width: 600px) {
+  .project-details{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .project-comments{
+    margin-top: -20px;
+  }
+  .project-chat{
+    overflow-y: scroll;
+    max-height: 50vh;
+  }
+  
+  .add-comment{
+    margin-top: 3rem;
+  }
 }

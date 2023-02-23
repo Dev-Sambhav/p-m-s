@@ -82,7 +82,7 @@ const Create = () => {
     // adding project object into firestore
     await addDocument(project);
     if (!response.error) {
-      navigate("/dashboard");
+      navigate("/");
     }
   };
   return (
