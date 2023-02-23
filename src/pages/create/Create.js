@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { FormRow } from "../../components";
 
 // styles
-import "./Create.css";
+import Wrapper from "../../assets/wrappers/Create";
 
 const categories = [
   { value: "Development", label: "Development" },
@@ -87,9 +87,9 @@ const Create = () => {
     }
   };
   return (
-    <>
-      {/* <h2 className="page-title">Create a New Project</h2> */}
+    <Wrapper>
       <div className="form create-form">
+        <h4 className="page-title">Create a New Project</h4>
         <form onSubmit={handleSubmit}>
           <FormRow
             type="text"
@@ -147,7 +147,7 @@ const Create = () => {
           {formErrors && <p className="error">{formErrors}</p>}
         </form>
       </div>
-    </>
+    </Wrapper>
   );
 };
 
