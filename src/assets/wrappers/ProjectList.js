@@ -34,9 +34,9 @@ const Wrapper = styled.div`
     text-decoration: none;
     color: var(--black);
   }
-  .project-list h4 {
-    font-size: 1.2rem;
+  .project-list h5 {
     color: var(--heading-color);
+    font-weight: 600;
   }
   .project-list p {
     color: var(--text-color);

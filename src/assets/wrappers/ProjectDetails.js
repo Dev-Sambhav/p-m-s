@@ -87,11 +87,12 @@ const Wrapper = styled.div`
   }
 
   /* comment list */
-  .project-comments h4,
+  .project-comments h5,
   .summary-title {
     color: var(--black);
     margin-top: 40px;
     margin-left: 5px;
+    font-weight: 600;
   }
   .project-comments li {
     padding: 5px 12px 12px;

@@ -14,7 +14,7 @@ const ProjectSummary = ({ project }) => {
   };
   return (
     <div>
-      <h4 className="summary-title">Project Summary</h4>
+      <h5 className="summary-title">Project Summary</h5>
       <div className="project-summary">
         <h3 className="project-title">{project.name}</h3>
         <span className="created-by">

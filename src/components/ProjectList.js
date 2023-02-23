@@ -13,7 +13,7 @@ const ProjectList = ({ projects }) => {
             to={`/projects/${project.id}`}
             key={project.id}
           >
-            <h4>{project.name}</h4>
+            <h5>{project.name}</h5>
             <p>Due by {project.dueDate.toDate().toDateString()}</p>
             <div className="assigned-to">
               <p>Assigned to</p>

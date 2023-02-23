@@ -33,7 +33,7 @@ const ProjectComments = ({ project }) => {
   };
   return (
     <div className="project-comments">
-      <h4>Project Comments</h4>
+      <h5>Project Comments</h5>
       <ul className="project-chat">
         {project.comments.length > 0 ?
           project.comments.map((comment) => (
