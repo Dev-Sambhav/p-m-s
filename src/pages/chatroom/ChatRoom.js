@@ -4,13 +4,13 @@ import { useAuthContext } from "../../hooks/useAuthContext";
 import SendMessage from "./SendMessage";
 import formatDistanceToNow from "date-fns/formatDistanceToNow";
 import useShortName from "../../hooks/useShortName";
-// import "./ChatRoom.css";
+import "./ChatRoom.css";
 
 const ChatRoom = () => {
   const { user } = useAuthContext();
   const scroll = useRef();
   const [messages, setMessages] = useState([]);
-  const {shortTheName} = useShortName();
+  const { shortTheName } = useShortName();
   useEffect(() => {
     projectFirestore
       .collection("messages")
@@ -25,7 +25,8 @@ const ChatRoom = () => {
       });
   }, []);
   return (
-    <>
+    <div className="chat">
+      <h3 className="title">Chatroom</h3>
       <div className="chat-room">
         <div className="message-box">
           {messages.length === 0 ? (
@@ -41,7 +42,7 @@ const ChatRoom = () => {
                 >
                   {uid !== user.uid ? (
                     <>
-                    <div className="logo-name">
+                      <div className="logo-name">
                         <img src={photoURL} alt="" />
                         <p className="logo-txt">{shortTheName(name)}</p>
                       </div>
@@ -81,8 +82,8 @@ const ChatRoom = () => {
         </div>
         <div ref={scroll}></div>
       </div>
-      <SendMessage scroll={scroll} />
-    </>
+        <SendMessage scroll={scroll} />
+    </div>
   );
 };
 

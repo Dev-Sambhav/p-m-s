@@ -1,9 +1,12 @@
+.chat {
+  margin-top: -2rem !important;
+}
+.chat .title{
+  margin-top: 1rem;
+}
 .chat-room {
-  width: 98%;
   height: 65vh;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  margin-top: -75px;
-  padding: 10px;
   overflow-y: scroll;
   background-color: #dfdbe5;
   border-radius: 15px;
@@ -57,6 +60,10 @@
   font-size: 15px;
 }
 
+.message.sent, .message.received{
+  /* z-index: -999; */
+}
+
 .message.sent {
   color: #192841;
   float: right;
@@ -87,8 +94,11 @@
   background-color: #a29bfe;
 }
 
+
+/* send message box */
+
 .SendMessageBox {
-  min-width: 690px;
+  width: 100%;
   margin-right: 10px;
 }
 
@@ -103,7 +113,7 @@
   margin-top: 15px;
 }
 
-.my-cmt{
+.my-cmt {
   display: block;
   position: relative;
   left: -10px;
@@ -111,12 +121,12 @@
   color: var(--text-color);
   font-size: 0.9em;
 }
-.logo-name{
+.logo-name {
   position: relative;
 }
-.logo-txt{
+.logo-txt {
   position: relative;
-  color:#dfdbe5;
+  color: #dfdbe5;
   left: -8px;
   top: -12px;
   margin-right: -8px !important;
