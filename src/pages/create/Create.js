@@ -5,9 +5,10 @@ import { timestamp } from "../../firebase/config";
 import { useAuthContext } from "../../hooks/useAuthContext";
 import { useFirestore } from "../../hooks/useFirestore";
 import { useNavigate } from "react-router-dom";
+import { FormRow } from "../../components";
 
 // styles
-// import "./Create.css";
+import "./Create.css";
 
 const categories = [
   { value: "Development", label: "Development" },
@@ -87,51 +88,56 @@ const Create = () => {
   };
   return (
     <>
-      <h2 className="page-title">Create a New Project</h2>
-      <div className="create-form">
+      {/* <h2 className="page-title">Create a New Project</h2> */}
+      <div className="form create-form">
         <form onSubmit={handleSubmit}>
-          <label>
-            <span>Project Name:</span>
-            <input
-              type="text"
-              required
-              onChange={(e) => setName(e.target.value)}
-              value={name}
-            />
-          </label>
-          <label>
-            <span>Project Details:</span>
+          <FormRow
+            type="text"
+            name="name"
+            handleChange={(e) => setName(e.target.value)}
+            value={name}
+            labelText="Project Name"
+          />
+          <FormRow
+            type="date"
+            name="name"
+            handleChange={(e) => setDueDate(e.target.value)}
+            value={dueDate}
+            labelText="Set Due Date"
+          />
+          <div className="form-row">
+            <label htmlFor={details} className="form-label">
+              Project Details
+            </label>
             <textarea
               required
               onChange={(e) => setDetails(e.target.value)}
               value={details}
+              className="form-text"
             ></textarea>
-          </label>
-          <label>
-            <span>Set Due Date:</span>
-            <input
-              type="date"
-              required
-              onChange={(e) => setDueDate(e.target.value)}
-              value={dueDate}
-            />
-          </label>
-          <label>
-            <span>Project Category:</span>
+          </div>
+          <div className="form-row">
+            <label htmlFor={categories} className="form-label">
+              Project Category
+            </label>
             <Select
               options={categories}
               onChange={(option) => setCategory(option)}
               defaultValue={category}
+              maxMenuHeight={200}
             />
-          </label>
-          <label>
-            <span>Assign to:</span>
+          </div>
+          <div className="form-row">
+            <label htmlFor={users} className="form-label">
+              Assign to
+            </label>
             <Select
               options={users}
               onChange={(option) => setAssignedUsers(option)}
               isMulti
+              maxMenuHeight={200}
             />
-          </label>
+          </div>
           {response.isLoading && (
             <button className="btn" disabled>
               Adding...

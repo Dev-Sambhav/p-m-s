@@ -4,6 +4,23 @@
   box-sizing: border-box;
 }
 
+/* custom scrollbar */
+html::-webkit-scrollbar {
+  width: 20px;
+}
+html::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: var(--grey-400);
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+
 /* fonts */
 @import url("https://fonts.googleapis.com/css2?family=Cabin&family=Roboto+Condensed:wght@400;700&display=swap");
 

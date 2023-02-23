@@ -2,14 +2,14 @@ import { useDocument } from "../../hooks/useDocument";
 import { useParams } from "react-router-dom";
 
 // styles
-import "./Project.css";
+import Wrapper from "../../assets/wrappers/ProjectDetails";
 //components
 import ProjectComments from "./ProjectComments";
 import ProjectSummary from "./ProjectSummary";
 
 const Project = () => {
   const { id } = useParams();
-  const { document: project, error} = useDocument("projects", id);
+  const { document: project, error } = useDocument("projects", id);
   if (error) {
     return <div className="error">{error}</div>;
   }
@@ -17,10 +17,12 @@ const Project = () => {
     return <div className="loading"></div>;
   }
   return (
-    <div className="project-details">
-      <ProjectSummary project={project} />
-      <ProjectComments project={project} />
-    </div>
+    <Wrapper>
+      <div className="project-details">
+        <ProjectSummary project={project} />
+        <ProjectComments project={project} />
+      </div>
+    </Wrapper>
   );
 };
 
