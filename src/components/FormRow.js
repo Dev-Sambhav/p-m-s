@@ -11,6 +11,7 @@ const FormRow = ({ type, name, handleChange, value, labelText, handleFileChange}
         value={value}
         onChange={handleChange || handleFileChange}
         required
+        autoComplete="off"
       />
     </div>
   );

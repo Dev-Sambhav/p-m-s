@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FormRow } from "../components";
+import { FormRow, MessageCard } from "../components";
 import { useAuthContext } from "../hooks/useAuthContext";
 import Wrapper from "../assets/wrappers/DashboardFormPage";
 import { useProfile } from "../hooks/useProfile";
@@ -38,16 +38,10 @@ const Profile = () => {
       <form className="form" onSubmit={handleSubmit}>
         <h3>Profile</h3>
         {isOpen && (
-          <div className="alert-box">
-            <div className="content">
-              <div className="icon">
-                <i className="fa fa-check"></i>
-              </div>
-              <div className="title">Success!!</div>
-              <div className="description">Profile updated successfully!</div>
-              <button className="btn dismiss-btn" onClick={handleClick}>DISMISS</button>
-            </div>
-          </div>
+          <MessageCard
+            description="Profile updated successfully!"
+            handleClick={handleClick}
+          />
         )}
         <div className="form-center">
           <FormRow

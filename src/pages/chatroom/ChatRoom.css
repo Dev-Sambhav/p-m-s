@@ -1,15 +1,14 @@
 .chat {
-  margin-top: -2rem !important;
 }
-.chat .title{
+.chat .title {
   margin-top: 1rem;
 }
 .chat-room {
   height: 65vh;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   overflow-y: scroll;
-  background-color: #dfdbe5;
-  border-radius: 15px;
+  background-color: var(--white);
+  border-radius: var(--largeBorderRadius);
   background-color: #dfdbe5;
   background-image: url("../../assets/chat-background_3.gif");
   background-repeat: no-repeat;
@@ -58,10 +57,7 @@
 .message p {
   margin: 10px;
   font-size: 15px;
-}
-
-.message.sent, .message.received{
-  /* z-index: -999; */
+  color: var(--black);
 }
 
 .message.sent {
@@ -94,7 +90,6 @@
   background-color: #a29bfe;
 }
 
-
 /* send message box */
 
 .SendMessageBox {
@@ -109,7 +104,7 @@
   padding: 10px;
   padding-bottom: 30px;
   background: #3a3845;
-  border-radius: 10px;
+  border-radius: var(--largeBorderRadius);
   margin-top: 15px;
 }
 
@@ -130,4 +125,13 @@
   left: -8px;
   top: -12px;
   margin-right: -8px !important;
+}
+
+@media (max-width: 600px) {
+  .chat {
+    height: 0vh !important;
+  }
+  .chat-room {
+    height: 60vh;
+  }
 }

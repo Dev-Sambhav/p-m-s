@@ -26,7 +26,7 @@ const ChatRoom = () => {
   }, []);
   return (
     <div className="chat">
-      <h3 className="title">Chatroom</h3>
+      {/* <h3 className="title">Chatroom</h3> */}
       <div className="chat-room">
         <div className="message-box">
           {messages.length === 0 ? (

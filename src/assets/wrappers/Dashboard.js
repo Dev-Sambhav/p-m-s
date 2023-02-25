@@ -45,6 +45,9 @@ const Wrapper = styled.section`
       justify-content: normal;
       row-gap: 10px;
     }
+    .dashboard-area{
+      height: 0vh !important;
+    }
   }
 `;
 
