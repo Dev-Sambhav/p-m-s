@@ -22,7 +22,7 @@ const Login = () => {
   const { facebookSignIn } = useFacebook();
   const navigate = useNavigate();
   const { user, alert} = useAuthContext();
-  // let inputError = "";
+
 
   // handle change
   const handleChange = (e) => {

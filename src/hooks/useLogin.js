@@ -14,7 +14,7 @@ export const useLogin = () => {
     try {
       // checking all field empty or not
       if (email === "" || password === "") {
-        throw new Error("Required");
+        throw new Error("Please fill all the fields");
       }
       // login the user
       const res = await projectAuth.signInWithEmailAndPassword(email, password);
@@ -37,13 +37,11 @@ export const useLogin = () => {
     } catch (err) {
       if (!isCancelled) {
         setIsLoading(false);
-        console.log(err);
-        if (err === "Required") setError("Please fill all the fields");
-        else if (err.code === "auth/user-not-found")
+        if (err.code === "auth/user-not-found")
           setError("User doesn't exists");
         else if (err.code === "auth/wrong-password")
           setError("Password is Invalid");
-        else setError("Too many wrong attempts. Please try again later!!!");
+        else setError(err.message);
         handleShowAlert();
       }
     }

@@ -10,7 +10,7 @@
   background-color: var(--white);
   border-radius: var(--largeBorderRadius);
   background-color: #dfdbe5;
-  background-image: url("../../assets/chat-background_3.gif");
+  background-image: url("../../assets/images/chat-background_3.gif");
   background-repeat: no-repeat;
   background-size: cover;
 }

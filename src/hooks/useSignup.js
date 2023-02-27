@@ -11,12 +11,16 @@ export const useSignup = () => {
   const [isCancelled, setIsCancelled] = useState(false);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const { dispatch } = useAuthContext();
+  const { dispatch, handleShowAlert } = useAuthContext();
 
   const signup = async (email, password, displayName, thumbnail) => {
     setError(null);
     setIsLoading(true);
     try {
+      // checking all field empty or not
+      if (email === "" || password === "" || displayName === "") {
+        throw new Error("Please fill all the fields");
+      }
       // signup the user
       const res = await projectAuth.createUserWithEmailAndPassword(
         email,
@@ -43,11 +47,7 @@ export const useSignup = () => {
       });
 
       // dispatch the user data globally
-      dispatch({ type: "SIGNUP", payload: res.user });
-
-      // send welcome message
-      // console.log("Email:-",res.user.email);
-      
+      dispatch({ type: "SIGNUP", payload: res.user });      
 
       // update state
       if (!isCancelled) {
@@ -56,9 +56,9 @@ export const useSignup = () => {
       }
     } catch (err) {
       if (!isCancelled) {
-        console.log(err.message);
-        setError(err.message);
         setIsLoading(false);
+        setError(err.message);
+        handleShowAlert();
       }
     }
   };
