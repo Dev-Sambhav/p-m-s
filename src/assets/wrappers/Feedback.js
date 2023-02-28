@@ -3,9 +3,9 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   .feedback-form {
     margin: 0 auto;
+    margin-bottom: 2rem;
     width: 60vw;
     max-width: var(--max-width);
-    /* min-height: 100vh; */
   }
   .feedback-form .page-title {
     text-align: center;

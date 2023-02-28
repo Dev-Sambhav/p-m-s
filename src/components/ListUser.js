@@ -15,7 +15,7 @@ const ListUser = ({ isUserIcon, handleClick }) => {
                 <img
                   src={user.photoURL}
                   className="user-logo"
-                  alt="user-logo"
+                  alt="Logo"
                 />
               </div>
             ))}

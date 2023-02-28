@@ -57,6 +57,7 @@ const Profile = () => {
             value={email}
             handleChange={(e) => setEmail(e.target.value)}
             labelText="Email"
+            readOnly="true"
           />
           {isLoading && (
             <button className="btn btn-block" disabled={true}>

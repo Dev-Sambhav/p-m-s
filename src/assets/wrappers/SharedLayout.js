@@ -9,6 +9,7 @@ const Wrapper = styled.section`
     width: 90vw;
     margin: 0 auto;
     padding: 2.5rem 0;
+    padding-bottom: 0;
   }
 
   @media (min-width: 992px) {

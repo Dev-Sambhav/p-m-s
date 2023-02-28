@@ -4,11 +4,13 @@ import { FaAlignLeft, FaCaretDown } from "react-icons/fa";
 import Logo from "./Logo";
 import { useAuthContext } from "../hooks/useAuthContext";
 import Wrapper from "../assets/wrappers/Navbar";
+import useShortName from "../hooks/useShortName";
 
 const Navbar = () => {
   const { handleToggleSidebar, user } = useAuthContext();
   const [showLogout, setShowLogout] = useState(false);
   const { logout, isLoading } = useLogout();
+  const {shortTheName} = useShortName();
   // handle logout dropdown view
   const handleDropDown = () => {
     setShowLogout(!showLogout);
@@ -28,7 +30,7 @@ const Navbar = () => {
         <div className="btn-container">
           <button className="btn" onClick={handleDropDown}>
             <img className="nav-img" src={user.photoURL} alt="avatar" />
-            {user.displayName}
+            {shortTheName(user.displayName)}
             <FaCaretDown />
           </button>
           <div className={showLogout ? "dropdown show-dropdown" : "dropdown"}>

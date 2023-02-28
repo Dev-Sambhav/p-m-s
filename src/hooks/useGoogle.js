@@ -10,7 +10,7 @@ import useShortName from "./useShortName";
 export const useGoogle = () => {
   const [isCancelled, setIsCancelled] = useState(false);
   const [error, setError] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoadingGoogle, setIsLoading] = useState(false);
   const { dispatch } = useAuthContext();
   const {shortTheName} = useShortName();
   const googleSignIn = async () => {
@@ -34,9 +34,6 @@ export const useGoogle = () => {
       // dispatch the user data globally
       dispatch({ type: "SIGNUP", payload: res.user });
 
-      // send welcome message
-      // console.log("Email:-",res.user.email);
-
       // update state
       if (!isCancelled) {
         setIsLoading(false);
@@ -53,5 +50,5 @@ export const useGoogle = () => {
   useEffect(() => {
     return () => setIsCancelled(true);
   }, []);
-  return { error, isLoading, googleSignIn };
+  return { error, isLoadingGoogle, googleSignIn };
 };

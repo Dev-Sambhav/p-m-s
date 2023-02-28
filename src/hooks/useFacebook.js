@@ -10,7 +10,7 @@ import useShortName from "./useShortName";
 export const useFacebook = () => {
   const [isCancelled, setIsCancelled] = useState(false);
   const [error, setError] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoadingFacebook, setIsLoading] = useState(false);
   const { dispatch } = useAuthContext();
   const {shortTheName} = useShortName();
   const facebookSignIn = async () => {
@@ -53,5 +53,5 @@ export const useFacebook = () => {
   useEffect(() => {
     return () => setIsCancelled(true);
   }, []);
-  return { error, isLoading, facebookSignIn };
+  return { error, isLoadingFacebook, facebookSignIn };
 };

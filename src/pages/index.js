@@ -11,6 +11,7 @@ import ProjectSummary from "./project/ProjectSummary";
 import Signup from "./signup/Signup";
 import Landing from "./landing/Landing"
 import Profile from "./Profile";
+import About from "./About";
 
 export {
   ChatRoom,
@@ -25,5 +26,6 @@ export {
   ProjectSummary,
   Signup,
   Landing,
-  Profile
+  Profile,
+  About
 };

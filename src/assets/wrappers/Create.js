@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   .create-form {
-    /* overflow-y: scroll; */
     margin: 0 auto;
+    margin-bottom: 2rem;
     width: 60vw;
     max-width: var(--max-width);
-    min-height: 100vh;
+    min-height: 100vh !important;
   }
 
   .create-form .page-title{
@@ -20,6 +20,7 @@ const Wrapper = styled.div`
     background-color: var(--backgroundColor);
     border-radius: var(--borderRadius);
     color: var(--textColor);
+    padding: .5rem;
   }
 
 

@@ -1,4 +1,12 @@
-const FormRow = ({ type, name, handleChange, value, labelText, handleFileChange}) => {
+const FormRow = ({
+  type,
+  name,
+  handleChange,
+  value,
+  labelText,
+  handleFileChange,
+  readOnly,
+}) => {
   return (
     <div className="form-row">
       <label htmlFor={name} className="form-label">
@@ -12,6 +20,7 @@ const FormRow = ({ type, name, handleChange, value, labelText, handleFileChange}
         onChange={handleChange || handleFileChange}
         required
         autoComplete="off"
+        readOnly={readOnly === "true" ? true : false}
       />
     </div>
   );

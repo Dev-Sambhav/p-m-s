@@ -106,15 +106,15 @@ const Create = () => {
             labelText="Set Due Date"
           />
           <div className="form-row">
-            <label htmlFor={details} className="form-label">
-              Project Details
+            <label htmlFor={users} className="form-label">
+              Assign to
             </label>
-            <textarea
-              required
-              onChange={(e) => setDetails(e.target.value)}
-              value={details}
-              className="form-text"
-            ></textarea>
+            <Select
+              options={users}
+              onChange={(option) => setAssignedUsers(option)}
+              isMulti
+              maxMenuHeight={200}
+            />
           </div>
           <div className="form-row">
             <label htmlFor={categories} className="form-label">
@@ -128,15 +128,15 @@ const Create = () => {
             />
           </div>
           <div className="form-row">
-            <label htmlFor={users} className="form-label">
-              Assign to
+            <label htmlFor={details} className="form-label">
+              Project Details
             </label>
-            <Select
-              options={users}
-              onChange={(option) => setAssignedUsers(option)}
-              isMulti
-              maxMenuHeight={200}
-            />
+            <textarea
+              required
+              onChange={(e) => setDetails(e.target.value)}
+              value={details}
+              className="form-text"
+            ></textarea>
           </div>
           {response.isLoading && (
             <button className="btn" disabled>

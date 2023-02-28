@@ -63,6 +63,9 @@ const Wrapper = styled.section`
     .signup-left img, .line {
       display: none;
     }
+    .login-icon{
+      gap: 10px;
+    }
   }
 `
 export default Wrapper

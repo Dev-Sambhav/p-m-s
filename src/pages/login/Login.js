@@ -18,11 +18,10 @@ const initialState = {
 const Login = () => {
   const [values, setValues] = useState(initialState);
   const { login, isLoading, error } = useLogin();
-  const { googleSignIn } = useGoogle();
-  const { facebookSignIn } = useFacebook();
+  const { googleSignIn, isLoadingGoogle } = useGoogle();
+  const { facebookSignIn, isLoadingFacebook } = useFacebook();
   const navigate = useNavigate();
-  const { user, alert} = useAuthContext();
-
+  const { user, alert } = useAuthContext();
 
   // handle change
   const handleChange = (e) => {
@@ -95,26 +94,38 @@ const Login = () => {
           </button>
         )}
         <div className="login-icon">
-          <button
-            type="button"
-            onClick={handleGoogleLogin}
-            class="btn social-btn"
-          >
-            <i class="fa fa-google fa-fw"></i> Google
-          </button>
-          <button
-            type="button"
-            onClick={handleFacebookLogin}
-            class="btn social-btn"
-          >
-            <i class="fa fa-facebook fa-fw"></i> Facebook
-          </button>
+          {!isLoadingGoogle ? (
+            <button
+              type="button"
+              onClick={handleGoogleLogin}
+              class="btn social-btn"
+            >
+              <i class="fa fa-google fa-fw"></i> Google
+            </button>
+          ) : (
+            <button type="button" disabled={true} class="btn social-btn">
+              Logging...
+            </button>
+          )}
+          {!isLoadingFacebook ? (
+            <button
+              type="button"
+              onClick={handleFacebookLogin}
+              class="btn social-btn"
+            >
+              <i class="fa fa-facebook fa-fw"></i> Facebook
+            </button>
+          ) : (
+            <button type="button" disabled={true} class="btn social-btn">
+              Logging...
+            </button>
+          )}
         </div>
         <p>
-        Have not a account?
-        <Link to="/register" className="member-btn">
-          Register
-        </Link>
+          Have not a account?
+          <Link to="/register" className="member-btn">
+            Register
+          </Link>
         </p>
       </form>
     </Wrapper>

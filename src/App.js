@@ -10,7 +10,8 @@ import {
   ChatRoom,
   Landing,
   Profile,
-  Project
+  Project,
+  About
 } from "./pages";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <Route path="chatroom" element={<ChatRoom />} />
             <Route path="feedback" element={<Feedbackform />} />
             <Route path="profile" element={<Profile />} />
+            <Route path="about" element={<About />} />
             <Route path="projects/:id" element={<Project />} />
           </Route>
           <Route path="/landing" element={<Landing />} />

@@ -1,4 +1,5 @@
 .chat {
+  margin-bottom: 1rem;
 }
 .chat .title {
   margin-top: 1rem;
@@ -128,10 +129,5 @@
 }
 
 @media (max-width: 600px) {
-  .chat {
-    height: 0vh !important;
-  }
-  .chat-room {
-    height: 60vh;
-  }
+  
 }
