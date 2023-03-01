@@ -32,10 +32,10 @@ const ChatRoom = () => {
           {messages.length === 0 ? (
             <p className="no-chat">Chat not Started Yet!!!</p>
           ) : (
-            messages.map(({ id, text, photoURL, uid, createdAt, name }) => (
+            messages.map(({ text, photoURL, uid, createdAt, name },index) => (
               <div>
                 <div
-                  key={id}
+                  key={index}
                   className={`message ${
                     uid === user.uid ? "sent" : "received"
                   }`}

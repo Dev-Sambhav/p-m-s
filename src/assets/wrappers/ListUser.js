@@ -14,8 +14,17 @@ const Wrapper = styled.div`
     padding: 1.5rem;
     z-index: 2;
     opacity: 1;
-    transition: var(--transition);
     overflow: hidden;
+    animation: show-list .7s ease forwards;
+  }
+
+  @keyframes show-list {
+    from{
+      height: 0rem;
+    }
+    to{
+      height: 26.563rem;
+    }
   }
   .no-user-list {
     display: none;
@@ -64,15 +73,15 @@ const Wrapper = styled.div`
     right: 30px;
     border-radius: 50%;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
     z-index: 3;
   }
   .user-box:hover {
     background-color: var(--primary-700);
   }
   .user-icon {
-    width: 55px;
-    height: 55px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     display: flex;
     justify-content: center;

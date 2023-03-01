@@ -10,7 +10,7 @@ const ProjectSummary = ({ project }) => {
 
   const handleClick = () => {
     deleteDocument(project.id);
-    navigate("/dashboard");
+    navigate("/");
   };
   return (
     <div>
