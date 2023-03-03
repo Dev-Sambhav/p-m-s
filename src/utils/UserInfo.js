@@ -30,7 +30,7 @@ const userInfo = [
   },
   {
     id: 4,
-    name: "Ritik Kumar",
+    name: "Ritik Raj",
     position: "Testing",
     photoURL: 'https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortWaved&accessoriesType=Round&hatColor=Gray02&hairColor=BlondeGolden&facialHairType=Blank&facialHairColor=Brown&clotheType=CollarSweater&clotheColor=Heather&eyeType=Happy&eyebrowType=UnibrowNatural&mouthType=Smile&skinColor=Light',
     leftLogo:false,

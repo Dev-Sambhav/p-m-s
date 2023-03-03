@@ -10,6 +10,7 @@ const ProjectList = ({ projects }) => {
         {projects.length === 0 && <p>No Projects Yet!</p>}
         {projects.map((project) => (
           <Link
+            className="project-info"
             to={`/projects/${project.id}`}
             key={project.id}
           >

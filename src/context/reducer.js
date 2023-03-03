@@ -8,6 +8,7 @@ import {
   SHOW_ALERT,
   CLEAR_ALERT,
   UPDATE_PROFILE,
+  PAGE_TITLE,
 } from "./action";
 
 // reducer function
@@ -46,6 +47,15 @@ const authReducer = (state, action) => {
         isAuthReady: true,
         toggleSidebar: false,
         toggleUser: false,
+      };
+    case PAGE_TITLE:
+      return {
+        ...state,
+        user: action.payload,
+        isAuthReady: true,
+        toggleSidebar: false,
+        toggleUser: false,
+        pageTitle: action.payload,
       };
     case TOGGLE_SIDEBAR:
       return { ...state, toggleSidebar: !state.toggleSidebar };

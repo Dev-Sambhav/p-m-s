@@ -6,11 +6,11 @@ const Wrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 20px;
-    max-height: 55vh;
-    overflow-y: scroll;
+    /* max-height: 55vh; */
+    /* overflow-y: scroll; */
   }
   /* custom scrollbar */
-  .project-list::-webkit-scrollbar {
+  /* .project-list::-webkit-scrollbar {
     width: 20px;
   }
   .project-list::-webkit-scrollbar-track {
@@ -24,15 +24,20 @@ const Wrapper = styled.div`
   }
   .project-list::-webkit-scrollbar-thumb:hover {
     background-color: #a8bbbf;
-  }
+  } */
 
-  .project-list a {
+  .project-list .project-info {
     background-color: var(--white);
     padding: 16px;
     border-radius: var(--borderRadius);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
     text-decoration: none;
     color: var(--black);
+    transition: all 0.3s ease-in-out;
+  }
+  .project-info:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-4);
   }
   .project-list h5 {
     color: var(--heading-color);
@@ -61,6 +66,7 @@ const Wrapper = styled.div`
   @media (max-width: 600px) {
     .project-list {
       max-height: 55vh;
+      overflow-y: scroll;
     }
     /* Hide scrollbar for Chrome, Safari and Opera */
     .project-list::-webkit-scrollbar {

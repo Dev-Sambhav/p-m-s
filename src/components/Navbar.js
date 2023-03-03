@@ -7,7 +7,7 @@ import Wrapper from "../assets/wrappers/Navbar";
 import useShortName from "../hooks/useShortName";
 
 const Navbar = () => {
-  const { handleToggleSidebar, user } = useAuthContext();
+  const { handleToggleSidebar, user, pageTitle } = useAuthContext();
   const [showLogout, setShowLogout] = useState(false);
   const { logout, isLoading } = useLogout();
   const {shortTheName} = useShortName();
@@ -24,7 +24,7 @@ const Navbar = () => {
 
         <div>
           <Logo className="landing-logo" />
-          <h3 className="logo-text">Dashboard</h3>
+          <h3 className="logo-text">{pageTitle}</h3>
         </div>
 
         <div className="btn-container">
