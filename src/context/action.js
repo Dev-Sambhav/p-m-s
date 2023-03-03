@@ -7,4 +7,3 @@ export const TOGGLE_USER = "TOGGLE_USER";
 export const SHOW_ALERT = "SHOW_ALERT";
 export const CLEAR_ALERT = "CLEAR_ALERT";
 export const UPDATE_PROFILE = "UPDATE_PROFILE";
-export const PAGE_TITLE = "PAGE_TITLE";

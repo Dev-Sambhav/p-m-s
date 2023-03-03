@@ -6,7 +6,6 @@ import {
   IS_AUTH_READY,
   TOGGLE_SIDEBAR,
   TOGGLE_USER,
-  PAGE_TITLE
 } from "./action";
 import authReducer from "./reducer";
 
@@ -20,7 +19,6 @@ export const initialState = {
   toggleSidebar: false,
   toggleUser: false,
   alert: false,
-  pageTitle: "Dashboard",
 };
 
 export const AuthContextProvider = ({ children }) => {
@@ -50,11 +48,6 @@ export const AuthContextProvider = ({ children }) => {
     }, 3000);
   };
 
-  // handle change page title
-  const handlePageTitle = (title) => {
-    dispatch({type : PAGE_TITLE, payload : title});
-  }
-
   // for preventing user information if user already login
   useEffect(() => {
     const unsub = projectAuth.onAuthStateChanged((user) => {
@@ -70,7 +63,6 @@ export const AuthContextProvider = ({ children }) => {
         handleToggleSidebar,
         handleToggleUser,
         handleShowAlert,
-        handlePageTitle
       }}
     >
       {children}
