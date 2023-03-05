@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const Wrapper = styled.main`
   text-align: center;
   img {
-    max-width: 600px;
+    max-width: 550px;
     display: block;
     margin-bottom: 2rem;
   }
@@ -22,6 +22,12 @@ const Wrapper = styled.main`
     color: var(--primary-500);
     text-decoration: underline;
     text-transform: capitalize;
+  }
+
+  @media (max-width: 600px){
+    img{
+      max-width: 300px;
+    }
   }
 `
 

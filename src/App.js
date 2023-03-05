@@ -11,7 +11,8 @@ import {
   Landing,
   Profile,
   Project,
-  About
+  About,
+  Error
 } from "./pages";
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
           <Route path="/landing" element={<Landing />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Signup />} />
+          <Route path="*" element={<Error/>} />
         </Routes>
       </BrowserRouter>
       )}

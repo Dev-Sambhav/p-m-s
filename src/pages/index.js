@@ -12,6 +12,7 @@ import Signup from "./signup/Signup";
 import Landing from "./landing/Landing"
 import Profile from "./Profile";
 import About from "./About";
+import Error from "./Error"
 
 export {
   ChatRoom,
@@ -27,5 +28,6 @@ export {
   Signup,
   Landing,
   Profile,
-  About
+  About,
+  Error
 };

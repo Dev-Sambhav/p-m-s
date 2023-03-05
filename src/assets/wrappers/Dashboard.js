@@ -28,24 +28,65 @@ const Wrapper = styled.section`
     margin: auto 0;
   }
   .project-filter button {
-    background: transparent;
+    position: relative;
+    display: inline-block;
     border: 0;
+    border-radius: 20px;
     color: var(--black);
     cursor: pointer;
-    font-size: 0.9em;
-    margin-left: 10px
+    font-size: 1em;
+    margin-left: 10px;
+    overflow: hidden;
+    transition: all 0.3s;
+    z-index: 1;
+    padding: .5rem;
   }
 
+  .project-filter button::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: var(--primary-500);
+    transition: all 0.3s;
+    border-radius: 20px;
+    z-index: -1;
+  }
+  .project-filter button::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+    z-index: -2;
+  }
+
+  .project-filter button:hover {
+    color: var(--white);
+  }
+  .project-filter button:hover:before {
+    width: 100%;
+  }
+  
+  
   .project-filter button.active {
     font-weight: bold;
     font-size: 1em;
+    color: var(--grey-900);
+  }
+  .project-filter button.active:hover{
+    color: var(--white);
   }
   @media (max-width: 600px) {
     .project-filter nav {
       justify-content: normal;
       row-gap: 10px;
     }
-    .dashboard-area{
+    .dashboard-area {
       height: 0vh !important;
     }
   }

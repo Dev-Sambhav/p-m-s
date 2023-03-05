@@ -40,7 +40,7 @@ const Wrapper = styled.div`
     box-shadow: var(--shadow-4);
   }
   .project-list h5 {
-    color: var(--heading-color);
+    color: var(--grey-900);
     font-weight: 600;
   }
   .project-list p {
