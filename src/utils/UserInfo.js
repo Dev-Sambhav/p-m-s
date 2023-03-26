@@ -1,4 +1,6 @@
-import sam from "../assets/images/my_img1.jpg";
+import sam from "../assets/images/my_img1.png";
+import sushant from "../assets/images/sushant.png"
+import alok from "../assets/images/alok2.png"
 
 const userInfo = [
   {
@@ -8,13 +10,13 @@ const userInfo = [
     photoURL: sam,
     leftLogo:true,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque volutpat pulvinar elementum. Aenean efficitur nunc et augue finibus, fermentum lacinia ligula condimentum. Mauris eleifend bibendum.",
+      "Hii, I'm Sambhav Sharma and i am the UI developer as well as Frontend developer of this website. My focus is on creating visually appealing and intuitive interfaces for websites.",
   },
   {
     id: 2,
     name: "Sushant Kumar",
     position: "Backend",
-    photoURL: 'https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortCurly&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light',
+    photoURL: sushant,
     leftLogo:false,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque volutpat pulvinar elementum. Aenean efficitur nunc et augue finibus, fermentum lacinia ligula condimentum. Mauris eleifend bibendum.",
@@ -23,7 +25,7 @@ const userInfo = [
     id: 3,
     name: "Alok Rana",
     position: "Documentation",
-    photoURL: 'https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShaggyMullet&accessoriesType=Blank&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=Blue03&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light',
+    photoURL: alok,
     leftLogo:true,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque volutpat pulvinar elementum. Aenean efficitur nunc et augue finibus, fermentum lacinia ligula condimentum. Mauris eleifend bibendum.",
