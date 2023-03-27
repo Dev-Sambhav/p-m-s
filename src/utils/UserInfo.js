@@ -1,6 +1,7 @@
 import sam from "../assets/images/my_img1.png";
 import sushant from "../assets/images/sushant.png"
 import alok from "../assets/images/alok2.png"
+import ritik from "../assets/images/ritik.png"
 
 const userInfo = [
   {
@@ -10,7 +11,7 @@ const userInfo = [
     photoURL: sam,
     leftLogo:true,
     description:
-      "Hii, I'm Sambhav Sharma and i am the UI developer as well as Frontend developer of this website. My focus is on creating visually appealing and intuitive interfaces for websites.",
+      "Hello, I'm Sambhav Sharma and I'm the UI developer as well as Frontend developer of this website. I use React js for Frontend. Being a React JS developer involves using the React JS library to develop and maintain web applications. My focus is on creating visually appealing and intuitive interfaces for websites.",
   },
   {
     id: 2,
@@ -19,7 +20,7 @@ const userInfo = [
     photoURL: sushant,
     leftLogo:false,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque volutpat pulvinar elementum. Aenean efficitur nunc et augue finibus, fermentum lacinia ligula condimentum. Mauris eleifend bibendum.",
+      "Hello, I'm Sushant Kumar and I'm the Backend developer and I'm using Firebase for Database. My focus is ensure that the application operates smoothly and meets the needs of its users.",
   },
   {
     id: 3,
@@ -28,16 +29,16 @@ const userInfo = [
     photoURL: alok,
     leftLogo:true,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque volutpat pulvinar elementum. Aenean efficitur nunc et augue finibus, fermentum lacinia ligula condimentum. Mauris eleifend bibendum.",
+      "Hello, I'm Alok Rana and I'm a document writer and My role involves for creating and maintaining documentation for various products, services, or processes. This can include user manuals, technical guides, API documentation, and other materials that help users understand how to use and interact with a product or service.",
   },
   {
     id: 4,
     name: "Ritik Raj",
     position: "Testing",
-    photoURL: 'https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortWaved&accessoriesType=Round&hatColor=Gray02&hairColor=BlondeGolden&facialHairType=Blank&facialHairColor=Brown&clotheType=CollarSweater&clotheColor=Heather&eyeType=Happy&eyebrowType=UnibrowNatural&mouthType=Smile&skinColor=Light',
+    photoURL: ritik,
     leftLogo:false,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque volutpat pulvinar elementum. Aenean efficitur nunc et augue finibus, fermentum lacinia ligula condimentum. Mauris eleifend bibendum.",
+      "Hello, I'm Ritik Raj and Being a tester involves evaluating the quality and functionality of software applications, systems, or products before they are released to the public. Testers work to identify defects, errors, and other issues that could impact the user experience or the overall performance of the product.",
   },
 ];
 
