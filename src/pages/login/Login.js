@@ -3,7 +3,6 @@ import { useLogin } from "../../hooks/useLogin";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuthContext } from "../../hooks/useAuthContext";
 import { useGoogle } from "../../hooks/useGoogle";
-import { useFacebook } from "../../hooks/useFacebook";
 import signin_logo from "../../assets/images/signin.svg";
 
 // styles
@@ -19,7 +18,6 @@ const Login = () => {
   const [values, setValues] = useState(initialState);
   const { login, isLoading, error } = useLogin();
   const { googleSignIn, isLoadingGoogle } = useGoogle();
-  const { facebookSignIn, isLoadingFacebook } = useFacebook();
   const navigate = useNavigate();
   const { user, alert } = useAuthContext();
 
@@ -44,10 +42,10 @@ const Login = () => {
   };
 
   // handle facebook login
-  const handleFacebookLogin = () => {
-    facebookSignIn();
-    console.log("Facebook Login Successful");
-  };
+  // const handleFacebookLogin = () => {
+  //   facebookSignIn();
+  //   console.log("Facebook Login Successful");
+  // };
 
   // redirect to user once login successful
   useEffect(() => {
@@ -107,7 +105,7 @@ const Login = () => {
               Logging...
             </button>
           )}
-          {!isLoadingFacebook ? (
+          {/* {!isLoadingFacebook ? (
             <button
               type="button"
               onClick={handleFacebookLogin}
@@ -119,7 +117,7 @@ const Login = () => {
             <button type="button" disabled={true} class="btn social-btn">
               Logging...
             </button>
-          )}
+          )} */}
         </div>
         <p>
           Have not a account?

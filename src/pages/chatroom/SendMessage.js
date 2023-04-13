@@ -33,7 +33,7 @@ const SendMessage = ({ scroll }) => {
               fontWeight: "550",
               marginLeft: "5px",
               marginBottom: "-3px",
-              color: "#fff",
+              color: "#102a43",
             }}
             placeholder="Message..."
             type="text"
@@ -48,7 +48,7 @@ const SendMessage = ({ scroll }) => {
               margin: "4px 5% -13px 5%",
               maxWidth: "200px",
               marginLeft: "20px",
-              color: "#B4FF9F",
+              color: "#9c27b0",
             }}
             type="submit"
             endIcon={<SendIcon />}
