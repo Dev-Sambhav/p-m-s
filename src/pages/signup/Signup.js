@@ -24,6 +24,16 @@ const Signup = () => {
   // handling on submit
   const handleSubmit = (e) => {
     e.preventDefault();
+    if(values.email[0].toLowerCase() >= '0' && values.email[0].toLowerCase() <= '9'){
+      setThumbnailError("Email should start with alphabets");
+      handleShowAlert();
+      return;
+    }
+    if(values.password.length <= 6){
+      setThumbnailError("Password is too short");
+      handleShowAlert();
+      return;
+    }
     if (thumbnail !== null) {
       signup(values.email, values.password, values.displayName, thumbnail);
     }

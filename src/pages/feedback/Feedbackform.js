@@ -1,12 +1,14 @@
 import { useState } from "react";
+import { useAuthContext } from "../../hooks/useAuthContext";
 // css
 import Wrapper from "../../assets/wrappers/Feedback";
 import SendFeedback from "./SendFeedback";
 import { FormRow, MessageCard } from "../../components";
 const Feedback = () => {
+  const {user} = useAuthContext();
   const [isOpen, setIsOpen] = useState(false);
-  const [name,setName] = useState("");
-  const [email,setEmail] = useState("");
+  const [name,setName] = useState(user?.displayName);
+  const [email,setEmail] = useState(user?.email);
   const [message,setMessage] = useState("");
 
   const handleClick = ()=>{
@@ -22,8 +24,6 @@ const Feedback = () => {
     }
     SendFeedback(feedback);
     // clear field
-    setName(""); 
-    setEmail(""); 
     setMessage("");
     // open the message box
     setIsOpen(!isOpen);
@@ -45,6 +45,7 @@ const Feedback = () => {
         handleChange={(e)=>setName(e.target.value)}
         value={name}
         labelText="Name:"
+        readOnly="true"
       />
       <FormRow
         type="email"
@@ -52,6 +53,7 @@ const Feedback = () => {
         handleChange={(e)=>setEmail(e.target.value)}
         value={email}
         labelText="Email:"
+        readOnly="true"
       />
       <div className="form-row">
             <label htmlFor={message} className="form-label">

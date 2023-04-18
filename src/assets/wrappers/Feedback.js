@@ -18,6 +18,7 @@ const Wrapper = styled.div`
     background-color: var(--backgroundColor);
     border-radius: var(--borderRadius);
     color: var(--textColor);
+    padding: .7rem;
   }
 
   @media (max-width: 600px) {
